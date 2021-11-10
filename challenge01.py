@@ -49,10 +49,19 @@ def input_pizzaEaten():
     return eatenPizza
 #007 사용자로부터 이름과 나이를 입력받아서 나이에 1을 더한 후 다음과 같이 출력하라.
 # [이름] next birthday you will be [새로운 나이]
+def getName_007():
+    strName = input("Type your name:")
+    return strName
+def getYourAge_007():
+    intYourAge = int(input("How old are you:"))
+    return intYourAge
 # Press the green button in the gutter to run the script.
 
 if __name__ == '__main__':
     print_hi('PyCharm')
+    name = getName_007()
+    age = getYourAge_007() + 1
+    print(f'{name} next birthday your will be {age}')
     #006
     #pizzaLeft = input_totalPizza() - input_pizzaEaten()
     #print(f"It is {pizzaLeft} pizza left")
