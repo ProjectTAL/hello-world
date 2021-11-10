@@ -63,10 +63,20 @@ def getTotalCost_008():
 def getTotalMember_008():
     member = int(input("Put the total members:"))
     return member
+#009 사용자로부터 일수(날짜 수)를 입력 받아서 그 일수까지 몇 시간, 몇 분, 몇 초가 남았는지 출력하라.
+def getTotalDays_009():
+    days = int(input("Put the number that you want to check as hours:minutes:seconds :"))
+    return days
 if __name__ == '__main__':
     print_hi('PyCharm')
-    cost = int(getTotalCost_008()/getTotalMember_008())
-    print("Each members need to cost ", cost)
+    days = getTotalDays_009()
+    hours = days * 24
+    minutes = hours * 60
+    seconds = minutes * 60
+    print("Hours:", hours, " Minutes:", minutes, " Seconds:", seconds)
+    #008
+    #cost = int(getTotalCost_008()/getTotalMember_008())
+    #print("Each members need to cost ", cost)
     #007
     #name = getName_007()
     #age = getYourAge_007() + 1
