@@ -56,12 +56,21 @@ def getYourAge_007():
     intYourAge = int(input("How old are you:"))
     return intYourAge
 # Press the green button in the gutter to run the script.
-
+#008 계산서의 총 가격과 몇 명이 같이 식사를 했는지 입력받는다. 총 가격을 인원수로 나누고 각 사람이 얼마씩 내야 하는지 출력하라.
+def getTotalCost_008():
+    price = int(input("Put the total price:"))
+    return price
+def getTotalMember_008():
+    member = int(input("Put the total members:"))
+    return member
 if __name__ == '__main__':
     print_hi('PyCharm')
-    name = getName_007()
-    age = getYourAge_007() + 1
-    print(f'{name} next birthday your will be {age}')
+    cost = int(getTotalCost_008()/getTotalMember_008())
+    print("Each members need to cost ", cost)
+    #007
+    #name = getName_007()
+    #age = getYourAge_007() + 1
+    #print(f'{name} next birthday your will be {age}')
     #006
     #pizzaLeft = input_totalPizza() - input_pizzaEaten()
     #print(f"It is {pizzaLeft} pizza left")
