@@ -67,13 +67,23 @@ def getTotalMember_008():
 def getTotalDays_009():
     days = int(input("Put the number that you want to check as hours:minutes:seconds :"))
     return days
+#010 1킬로그램은 2.204파운드다.
+#    몸무게를 킬로그램 단위로 입력받아서 파운드로 변환하여 출력하라.
+def getKilogram():
+    kg = int(input("Put the kilogram to transform to pound:"))
+    return kg
+def setKilogramToPound(kg):
+    ret = kg * 2.204
+    return ret
 if __name__ == '__main__':
     print_hi('PyCharm')
-    days = getTotalDays_009()
-    hours = days * 24
-    minutes = hours * 60
-    seconds = minutes * 60
-    print("Hours:", hours, " Minutes:", minutes, " Seconds:", seconds)
+    print("The result is ", setKilogramToPound(getKilogram()))
+    #009
+    #days = getTotalDays_009()
+    #hours = days * 24
+    #minutes = hours * 60
+    #seconds = minutes * 60
+    #print("Hours:", hours, " Minutes:", minutes, " Seconds:", seconds)
     #008
     #cost = int(getTotalCost_008()/getTotalMember_008())
     #print("Each members need to cost ", cost)
