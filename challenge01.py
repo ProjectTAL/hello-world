@@ -75,9 +75,21 @@ def getKilogram():
 def setKilogramToPound(kg):
     ret = kg * 2.204
     return ret
+#011 사용자로부터 100이 넘는 숫자를 입력받고 10미만의 숫자 하나를 입력받은 후, 작은 숫자가 큰 숫자 안에 몇 번 들어가는지 사용자 친화적인 형식으로 출력하라.
+def getNumber():
+    ret = int(input("Put the number over than 100, please :"))
+    return ret
+def getOneMoreNumber():
+    ret = int(input("Put the number less than 10, please:"))
+    return ret
 if __name__ == '__main__':
     print_hi('PyCharm')
-    print("The result is ", setKilogramToPound(getKilogram()))
+    n1 = getNumber()
+    n2 = getOneMoreNumber()
+    n3 = int(n1/n2)
+    print(f'Your 1st number is {n1}. The 2nd number is {n2}. {n2} can stay {n3} times in {n1}')
+    #010
+    #print("The result is ", setKilogramToPound(getKilogram()))
     #009
     #days = getTotalDays_009()
     #hours = days * 24
