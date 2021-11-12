@@ -24,7 +24,18 @@ def decideCondition(num):
         print("Too high")
     else:
         print("Thank you")
+#014 사용자에게 10과 20(포함) 사이의 숫자를 입력하라고 요청한다. 만약 입력한 값이 이 범위 안의 숫자이면 "Thank you"라는 메시지를
+#    출력한다. 그렇지 않다면 "Incorrect answer"라는 메시지를 출력하라.
+def getNumberHigerthan10nLessthan20():
+    ret = int(input("Put the number from 10 to 20 :"))
+    return ret
+def decideCondition02(num):
+    if num >= 10 and num <= 20:
+        print("Thank you")
+    else:
+        print("Incorrect answer")
 if __name__ == '__main__':
     testPrint()
-    decideCondition(getNumberLessthan20())
+    decideCondition02(getNumberHigerthan10nLessthan20())
+    #013 decideCondition(getNumberLessthan20())
     #012 cmpNumbers(getNumber1(), getNumber2())
