@@ -32,8 +32,18 @@ def decideCondition02(num):
         print("Thank you")
     else:
         print("Incorrect answer")
+#015
+def getColor():
+    ret = input("What color do you like: ")
+    return ret
+def decideFromCondition(color):
+    if color == "red" or color == "RED":
+        print("I like red too")
+    else:
+        print("I don't like that colour, I prefer red")
 if __name__ == '__main__':
     testPrint()
-    decideCondition02(getNumberooo())
+    decideFromCondition(getColor())
+    #014 decideCondition02(getNumberooo())
     #013 decideCondition01(getNumberLessthan20())
     #012 cmpNumbers(getNumber1(), getNumber2())
