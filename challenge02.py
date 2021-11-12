@@ -41,7 +41,7 @@ def decideFromCondition(color):
         print("I like red too")
     else:
         print("I don't like that colour, I prefer red")
-#016.
+#016..
 if __name__ == '__main__':
     testPrint()
     decideFromCondition(getColor())
