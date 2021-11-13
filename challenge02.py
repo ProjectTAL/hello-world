@@ -58,10 +58,23 @@ def decidefromCondition02(answer):
         decidefromCondition03(askSecondQuestion())
     else:
         print("Enyoy your day")
-
+#017
+def askAge():
+    ret = int(input("How old are you? "))
+    return ret
+def decidefromCondition04(age):
+    if age >= 18:
+        print("You can vote")
+    elif age == 17:
+        print("You can learn to drive")
+    elif age == 16:
+        print("You can guy a lottery")
+    else:
+        print("You can go Trick-or-Treating")
 if __name__ == '__main__':
-    testPrint()
-    decidefromCondition02(askFirstQuestion())
+    #testPrint()
+    decidefromCondition04(askAge())
+    #016 decidefromCondition02(askFirstQuestion())
     #015 decideFromCondition(getColor())
     #014 decideCondition02(getNumberooo())
     #013 decideCondition01(getNumberLessthan20())
