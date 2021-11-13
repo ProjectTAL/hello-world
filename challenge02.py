@@ -102,9 +102,36 @@ def decidefromCondition04(age):
         print("You can go Trick-or-Treating")
 
 
+# 018
+def decideFromCondition05(num):
+    if num < 10:
+        print("Too low")
+    elif num >= 10 and num <= 20:
+        print("Correct")
+    else:
+        print("Too high")
+
+
+# 019
+def decideFromCondtion06(num):
+    if num == 1:
+        print("Thank you")
+    elif num == 2:
+        print("Well done")
+    elif num == 3:
+        print("Correct")
+    else:
+        print("Error message")
+
+
 if __name__ == '__main__':
     # testPrint()
-    decidefromCondition04(askAge())
+    number = int(input("Put the number of 1, 2 and 3 : "))
+    decideFromCondtion06(number)
+    # 018
+    # number = int(input("Put the number you want : "))
+    # decideFromCondition05(number)
+    # 017 decidefromCondition04(askAge())
     # 016 decidefromCondition02(askFirstQuestion())
     # 015 decideFromCondition(getColor())
     # 014 decideCondition02(getNumberooo())
