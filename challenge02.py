@@ -41,10 +41,28 @@ def decideFromCondition(color):
         print("I like red too")
     else:
         print("I don't like that colour, I prefer red")
-#016..
+#016
+def askFirstQuestion():
+    ret = str.lower(input("Is it raining there? "))
+    return ret
+def askSecondQuestion():
+    ret = str.lower(input("What about the wind there? "))
+    return ret
+def decidefromCondition03(answer):
+    if answer == "yes":
+        print("It is too windy for an ambrella")
+    else:
+        print("Take an umbrella")
+def decidefromCondition02(answer):
+    if answer == "yes":
+        decidefromCondition03(askSecondQuestion())
+    else:
+        print("Enyoy your day")
+
 if __name__ == '__main__':
     testPrint()
-    decideFromCondition(getColor())
+    decidefromCondition02(askFirstQuestion())
+    #015 decideFromCondition(getColor())
     #014 decideCondition02(getNumberooo())
     #013 decideCondition01(getNumberLessthan20())
     #012 cmpNumbers(getNumber1(), getNumber2())
