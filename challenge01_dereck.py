@@ -3,11 +3,25 @@ def print_hello(name):
 
 
 if __name__ == '__main__':
+    # 009
+    DayValue = int(input("Enter the number of days: "))
+    days = DayValue
+    hours = days * 24
+    minutes = hours * 60
+    seconds = minutes * 60
+
+    print(f' There are {hours} hours, {minutes} minutes, and {seconds} seconds left until a {days} days. ')
+
+    # 008
+    # PricenumValue = int(input("Enter the total price of the bill: "))
+    # peoplenumValue = int(input("Enter the number of people: "))
+    # print(f'The price per person =  {PricenumValue / peoplenumValue} won')
+
     # 007
-    textValue = input("Enter your name: ")
-    numValue2 = int(input("Enter your age: "))
-    # answer = textValue
-    print(f' {textValue} next birthday you will be {numValue2 + 1} ')
+    # textValue = input("Enter your name: ")
+    # numValue2 = int(input("Enter your age: "))
+    # # answer = textValue
+    # print(f' {textValue} next birthday you will be {numValue2 + 1} ')
 
     # 006
     # pizzanumValue = int(input("Enter pizza number: "))
