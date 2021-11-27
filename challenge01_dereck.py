@@ -3,11 +3,18 @@ def print_hello(name):
 
 
 if __name__ == '__main__':
-    # 004
-    numValue = int(input("Enter first number: "))
-    numValue2 = int(input("Enter second number: "))
-    answer = numValue + numValue2
+    # 005
+    numValue = int(input("Enter the first number: "))
+    numValue2 = int(input("Enter the second number: "))
+    numValue3 = int(input("Enter the third number: "))
+    answer = (numValue + numValue2) * numValue3
     print(answer)
+
+    # 004
+    # numValue = int(input("Enter first number: "))
+    # numValue2 = int(input("Enter second number: "))
+    # answer = numValue + numValue2
+    # print(answer)
 
     # 003
     # print("What do you call a bear with no teeth?\nA gummy bear!")
