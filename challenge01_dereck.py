@@ -3,11 +3,17 @@ def print_hello(name):
 
 
 if __name__ == '__main__':
+    # 007
+    textValue = input("Enter your name: ")
+    numValue2 = int(input("Enter your age: "))
+    # answer = textValue
+    print(f' {textValue} next birthday you will be {numValue2 + 1} ')
+
     # 006
-    pizzanumValue = int(input("Enter pizza number: "))
-    pizzanumValue2 = int(input("Enter eaten pizza number: "))
-    answer = pizzanumValue - pizzanumValue2
-    print(f'pizza number, {answer}')
+    # pizzanumValue = int(input("Enter pizza number: "))
+    # pizzanumValue2 = int(input("Enter eaten pizza number: "))
+    # answer = pizzanumValue - pizzanumValue2
+    # print(f'pizza number, {answer}')
 
     # 005
     # numValue = int(input("Enter the first number: "))
