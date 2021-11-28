@@ -2,12 +2,24 @@ import astropy
 
 if __name__ == '__main__':
 
-    # 015
-    textValue = input("Enter your favorite color: ")
-    if textValue == "Red" or textValue == "red":
-        print("I like red too")
+    # 016
+    textValue = input("Enter if it's raining right now? ")
+    if textValue.lower() == "yes":
+        textValue = input("Enter whether it's windy or not? ")
+        if textValue.lower() == "yes":
+            print("It is too windy for an umbrella")
+        else:
+            print("Take an umbrella")
     else:
-        print("I don't like that colour, I prefer red")
+        print("Enjoy your day")
+
+    # 015
+    # textValue = input("Enter your favorite color: ")
+    #
+    # if textValue.lower() == "red":
+    #     print("I like red too")
+    # else:
+    #     print("I don't like that colour, I prefer red")
 
     # 014
     # numValue = int(input("Enter a number between 10 and 20: "))
