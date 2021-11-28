@@ -3,10 +3,15 @@ def print_hello(name):
 
 
 if __name__ == '__main__':
+    # 011
+    numValue = int(input("Enter a number above 100: "))
+    numValue2 = int(input("Please enter a number below 10: "))
+    print(f' {numValue}goes {numValue2}in {numValue / numValue2}in. ')
+
     # 010
-    numValue = int(input("Enter the martial arts: "))
-    answer = 2.204
-    print(f' {numValue * answer} Pound. ')
+    # numValue = int(input("Enter the martial arts: "))
+    # answer = 2.204
+    # print(f' {numValue * answer} Pound. ')
 
     # 009
     # DayValue = int(input("Enter the number of days: "))
