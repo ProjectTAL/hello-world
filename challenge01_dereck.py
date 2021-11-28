@@ -6,7 +6,7 @@ if __name__ == '__main__':
     # 011
     numValue = int(input("Enter a number above 100: "))
     numValue2 = int(input("Please enter a number below 10: "))
-    print(f' {numValue}안에 {numValue2}이 {numValue / numValue2}번 들어갑니다. ')
+    print(f' {numValue}goes {numValue2}in {numValue / numValue2}in. ')
 
     # 010
     # numValue = int(input("Enter the martial arts: "))
