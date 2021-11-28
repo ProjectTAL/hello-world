@@ -3,14 +3,19 @@ def print_hello(name):
 
 
 if __name__ == '__main__':
-    # 009
-    DayValue = int(input("Enter the number of days: "))
-    days = DayValue
-    hours = days * 24
-    minutes = hours * 60
-    seconds = minutes * 60
+    # 010
+    numValue = int(input("Enter the martial arts: "))
+    answer = 2.204
+    print(f' {numValue * answer} Pound. ')
 
-    print(f' There are {hours} hours, {minutes} minutes, and {seconds} seconds left until a {days} days. ')
+    # 009
+    # DayValue = int(input("Enter the number of days: "))
+    # days = DayValue
+    # hours = days * 24
+    # minutes = hours * 60
+    # seconds = minutes * 60
+
+    # print(f' There are {hours} hours, {minutes} minutes, and {seconds} seconds left until a {days} days. ')
 
     # 008
     # PricenumValue = int(input("Enter the total price of the bill: "))
