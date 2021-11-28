@@ -1,11 +1,20 @@
+import astropy
+
 if __name__ == '__main__':
 
-    # 014
-    numValue = int(input("Enter a number between 10 and 20: "))
-    if numValue >= 10 and numValue <= 20:
-        print("Thank you")
+    # 015
+    textValue = input("Enter your favorite color: ")
+    if textValue == "Red" or textValue == "red":
+        print("I like red too")
     else:
-        print("Incorrect answer")
+        print("I don't like that colour, I prefer red")
+
+    # 014
+    # numValue = int(input("Enter a number between 10 and 20: "))
+    # if numValue >= 10 and numValue <= 20:
+    #     print("Thank you")
+    # else:
+    #     print("Incorrect answer")
 
     # 013
     # numValue = int(input("Enter a number less than 20: "))
