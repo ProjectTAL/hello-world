@@ -6,8 +6,6 @@ if __name__ == '__main__':
     # 011
     numValue = int(input("Enter a number above 100: "))
     numValue2 = int(input("Please enter a number below 10: "))
-    hunderdnumValue = 100 < numValue
-    tennumValue = 10 > numValue2
     print(f' {numValue}안에 {numValue2}이 {numValue / numValue2}번 들어갑니다. ')
 
     # 010
