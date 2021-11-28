@@ -1,13 +1,27 @@
 if __name__ == '__main__':
 
-    # 012
-    numValue = int(input("Enter the first number: "))
-    numValue2 = int(input("Enter the second number: "))
-    if numValue > numValue2:
-        print(numValue)
+    # 014
+    numValue = int(input("Enter a number between 10 and 20: "))
+    if numValue >= 10 and numValue <= 20:
+        print("Thank you")
     else:
-        numValue2 > numValue
-        print(numValue2)
+        print("Incorrect answer")
+
+    # 013
+    # numValue = int(input("Enter a number less than 20: "))
+    # if numValue >= 20:
+    #     print("Too high")
+    # else:
+    #     print("Thank you")
+
+    # 012
+    # numValue = int(input("Enter the first number: "))
+    # numValue2 = int(input("Enter the second number: "))
+    # if numValue > numValue2:
+    #     print(numValue)
+    # else:
+    #     numValue2 > numValue
+    #     print(numValue2)
 
     # 011
     # numValue = int(input("Enter a number above 100: "))
