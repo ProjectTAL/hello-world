@@ -2,16 +2,27 @@ import astropy
 
 if __name__ == '__main__':
 
+    # 017
+    numValue = int(input("Enter your age: "))
+    if numValue >= 18:
+        print("You can vote")
+    elif numValue == 17:
+        print("You can learn to drive")
+    elif numValue == 16:
+        print("You can buy a lottery ticket")
+        if numValue < 16:
+            print("You can go Trick-or-Treating")
+
     # 016
-    textValue = input("Enter if it's raining right now? ")
-    if textValue.lower() == "yes":
-        textValue = input("Enter whether it's windy or not? ")
-        if textValue.lower() == "yes":
-            print("It is too windy for an umbrella")
-        else:
-            print("Take an umbrella")
-    else:
-        print("Enjoy your day")
+    # textValue = input("Enter if it's raining right now? ")
+    # if textValue.lower() == "yes":
+    #     textValue = input("Enter whether it's windy or not? ")
+    #     if textValue.lower() == "yes":
+    #         print("It is too windy for an umbrella")
+    #     else:
+    #         print("Take an umbrella")
+    # else:
+    #     print("Enjoy your day")
 
     # 015
     # textValue = input("Enter your favorite color: ")
