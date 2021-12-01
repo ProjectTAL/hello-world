@@ -2,14 +2,25 @@ import astropy
 
 if __name__ == '__main__':
 
-    # 018
-    numValue = int(input("Enter number: "))
-    if numValue < 10:
-        print("Too Low")
-    elif numValue >= 10 and numValue <= 20:
+    # 019
+    numValue = int(input("Enter a number between 1 and 3: "))
+    if numValue == 1:
+        print("Thank you")
+    elif numValue == 2:
+        print("Well Done")
+    elif numValue == 3:
         print("Correct")
     else:
-        print("Too High")
+        print("Error message")
+
+    # 018
+    # numValue = int(input("Enter number: "))
+    # if numValue < 10:
+    #     print("Too Low")
+    # elif numValue >= 10 and numValue <= 20:
+    #     print("Correct")
+    # else:
+    #     print("Too High")
 
     # 017
     # numValue = int(input("Enter your age: "))
