@@ -2,6 +2,15 @@ import astropy
 
 if __name__ == '__main__':
 
+    # 018
+    # numValue = int(input("Enter number: "))
+    # if numValue < 10:
+    #     print("Too Low")
+    # if numValue  10 and numValue <= 20:
+    #     print("Correct")
+    # else:
+    #     print("Too High")
+
     # 017
     numValue = int(input("Enter your age: "))
     if numValue >= 18:
@@ -10,8 +19,8 @@ if __name__ == '__main__':
         print("You can learn to drive")
     elif numValue == 16:
         print("You can buy a lottery ticket")
-        if numValue < 16:
-            print("You can go Trick-or-Treating")
+    else:
+        print("You can go Trick-or-Treating")
 
     # 016
     # textValue = input("Enter if it's raining right now? ")
