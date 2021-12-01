@@ -2,16 +2,47 @@ import astropy
 
 if __name__ == '__main__':
 
-    # 016
-    textValue = input("Enter if it's raining right now? ")
-    if textValue.lower() == "yes":
-        textValue = input("Enter whether it's windy or not? ")
-        if textValue.lower() == "yes":
-            print("It is too windy for an umbrella")
-        else:
-            print("Take an umbrella")
+    # 019
+    numValue = int(input("Enter a number between 1 and 3: "))
+    if numValue == 1:
+        print("Thank you")
+    elif numValue == 2:
+        print("Well Done")
+    elif numValue == 3:
+        print("Correct")
     else:
-        print("Enjoy your day")
+        print("Error message")
+
+    # 018
+    # numValue = int(input("Enter number: "))
+    # if numValue < 10:
+    #     print("Too Low")
+    # elif numValue >= 10 and numValue <= 20:
+    #     print("Correct")
+    # else:
+    #     print("Too High")
+
+    # 017
+    # numValue = int(input("Enter your age: "))
+    # if numValue >= 18:
+    #     print("You can vote")
+    # elif numValue == 17:
+    #     print("You can learn to drive")
+    # elif numValue == 16:
+    #     print("You can buy a lottery ticket")
+    # else:
+    #     print("You can go Trick-or-Treating")
+
+    # 016
+    # textValue = input("Enter if it's raining right now? ")
+    # if textValue.lower() == "yes":
+    #     textValue = input("Enter whether it's windy or not? ")
+    #     if textValue.lower() == "yes":
+    #         print("It is too windy for an umbrella")
+    #     else:
+    #         print("Take an umbrella")
+    # else:
+    #     print("Enjoy your day")
 
     # 015
     # textValue = input("Enter your favorite color: ")
