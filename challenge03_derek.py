@@ -1,7 +1,16 @@
 if __name__ == '__main__':
+
+    # 025
+    name = input("Please type your name: ")
+    if len(name) < 5:
+        lastname = input("Please type your lastname")
+        print(lastname.upper() + name.upper())
+    else:
+        print(name.lower())
+
     # 024
-    words = input("Please type anything you want me to say anything: ")
-    print(words.upper())
+    # words = input("Please type anything you want me to say anything: ")
+    # print(words.upper())
 
     # 023
     # index = input("Enter the first line of the lullaby: ")
