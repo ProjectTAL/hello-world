@@ -1,5 +1,4 @@
 if __name__ == '__main__':
-
     # 026
     PigLatin = input("Enter the word: ")
     PigLatinlength = len(PigLatin)
