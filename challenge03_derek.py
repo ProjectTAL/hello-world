@@ -1,12 +1,22 @@
 if __name__ == '__main__':
 
-    # 025
-    name = input("Please type your name: ")
-    if len(name) < 5:
-        lastname = input("Please type your lastname")
-        print(lastname.upper() + name.upper())
+    # 026
+    PigLatin = input("Enter the word: ")
+    PigLatinlength = len(PigLatin)
+    PigLatin1 = PigLatin[1: PigLatinlength]
+    PigLatin2 = PigLatin[0]
+    if PigLatin[0] == "a" or PigLatin[0] == "e" or PigLatin[0] == "i" or PigLatin[0] == "o" or PigLatin[0] == "u":
+        print(PigLatin + "way")
     else:
-        print(name.lower())
+        print(PigLatin1 + PigLatin2 + "ay")
+
+    # # 025
+    # name = input("Please type your name: ")
+    # if len(name) < 5:
+    #     lastname = input("Please type your lastname")
+    #     print(lastname.upper() + name.upper())
+    # else:
+    #     print(name.lower())
 
     # 024
     # words = input("Please type anything you want me to say anything: ")
