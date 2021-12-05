@@ -54,8 +54,7 @@ def input_thirdNumber_005():
     return thirdNumber
 
 
-# 006 사용자로부터 처음에 가지고 있었던 피자 조각 수를 입력받고
-#    몇 조각을 먹었는지 입력받아서 남은 조각 수를 계산하여 사람에게 익숙한 형식으로 출력하라
+# 006
 def input_totalPizza():
     totalPizza = int(input("put how many pizza you have :"))
     return totalPizza
@@ -66,8 +65,7 @@ def input_pizzaEaten():
     return eatenPizza
 
 
-# 007 사용자로부터 이름과 나이를 입력받아서 나이에 1을 더한 후 다음과 같이 출력하라.
-# [이름] next birthday you will be [새로운 나이]
+# 007
 def getName_007():
     strName = input("Type your name:")
     return strName
@@ -79,7 +77,7 @@ def getYourAge_007():
 
 
 # Press the green button in the gutter to run the script.
-# 008 계산서의 총 가격과 몇 명이 같이 식사를 했는지 입력받는다. 총 가격을 인원수로 나누고 각 사람이 얼마씩 내야 하는지 출력하라.
+# 008
 def getTotalCost_008():
     price = int(input("Put the total price:"))
     return price
@@ -90,14 +88,13 @@ def getTotalMember_008():
     return member
 
 
-# 009 사용자로부터 일수(날짜 수)를 입력 받아서 그 일수까지 몇 시간, 몇 분, 몇 초가 남았는지 출력하라.
+# 009
 def getTotalDays_009():
     days = int(input("Put the number that you want to check as hours:minutes:seconds :"))
     return days
 
 
-# 010 1킬로그램은 2.204파운드다.
-#    몸무게를 킬로그램 단위로 입력받아서 파운드로 변환하여 출력하라.
+# 010
 def getKilogram():
     kg = int(input("Put the kilogram to transform to pound:"))
     return kg
@@ -108,7 +105,7 @@ def setKilogramToPound(kg):
     return ret
 
 
-# 011 사용자로부터 100이 넘는 숫자를 입력받고 10미만의 숫자 하나를 입력받은 후, 작은 숫자가 큰 숫자 안에 몇 번 들어가는지 사용자 친화적인 형식으로 출력하라.
+# 011
 def getNumber():
     ret = int(input("Put the number over than 100, please :"))
     return ret
