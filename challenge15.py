@@ -76,6 +76,12 @@ def removeEOL(text):
     return text
 
 
+def addEOL(text):
+    if not text.endswith('\n'):
+        text = text + '\n'
+    return str(text)
+
+
 def addName():
     file = open("NameList.csv", "a")
     name = input("Enter name :")
@@ -84,10 +90,46 @@ def addName():
     file.close()
 
 
-# TODO - Imple from this api
 def modifyName():
     answer = input("Enter the name that you modify :")
     modifiedAnswer = input("What is the expected name :")
+    file = open("NameList.csv", "r")
+    reader = csv.reader(file)
+    rows = list(reader)
+    tmp = []
+    for row in rows:
+        tmp.append(row)
+    file.close()
+
+    file = open("NameList.csv", "w")
+    x = 0
+    for row in tmp:
+        # newRecord = tmp[x][0] + "\n"
+        if answer in row:
+            file.write(addEOL(modifiedAnswer))
+        else:
+            file.write(addEOL(tmp[x][0]))
+        x = x + 1
+    file.close()
+
+
+def deleteName():
+    answer = input("Enter the name that you delete :")
+    file = open("NameList.csv", "r")
+    reader = csv.reader(file)
+    rows = list(reader)
+    tmp = []
+    for row in rows:
+        tmp.append(row)
+    file.close()
+
+    file = open("NameList.csv", "w")
+    x = 0
+    for row in tmp:
+        if answer not in row:
+            file.write(addEOL(tmp[x][0]))
+        x = x + 1
+    file.close()
 
 
 def showAllNames():
@@ -102,15 +144,25 @@ if __name__ == '__main__':
     # 121
     flag = False
     while not flag:
-        flag = True  # .....
         showMenu()
-        menuNum = int(input("Enter number :"))
+        menuNum = input("Enter number :")
+        if menuNum.isdigit():
+            menuNum = int(menuNum)
+        else:
+            menuNum = 6
         if menuNum == 1:
             addName()
         elif menuNum == 2:
             modifyName()
+        elif menuNum == 3:
+            deleteName()
         elif menuNum == 4:
             showAllNames()
+        elif menuNum == 5:
+            flag = True
+        else:
+            print("You entered wrong number or string\n\nPlease enter the number (1-5) :")
+    print("Bye Bye~")
 
     # 120
 #     print("""1) Addition
