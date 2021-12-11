@@ -1,7 +1,54 @@
 import math
 
 if __name__ == '__main__':
+
+    # 051
+    num = 5
+    while True:
+        answer = int(input("There are {} green bottles hanging on the wall, {}  green bottles hanging on the wall, and if 1 green bottle should accidentally fall.  How many green bottles will be hanging on the wall? ".format(num, num)))
+        if answer == (num - 1):
+            print("There will be {} green bottles hanging on the wall".format(num))
+            if num == 1:
+                break
+            num = num - 1
+        else:
+            print("No try again")
+
+    print("There are no more green bottles hanging on the wall")
+
+    #
+    # num = 5
+    # print("There are", num, "green bottles hanging on the wall")
+    # print(num, "green bottles hanging on the wall, and if 1 green bottle should accidentally fall")
+    # guess = int(input("How many green bottles will be hanging on the wall? :"))
+    # while guess == num or num == 0:
+    #     print("no, try again")
+    #     num = num - 1
+    #     guess = int(input("How many green bottles will be hanging on the wall? :"))
+    # print("There will be", num, "green bottles hanging on the wall")
+
+    # 050
+    # num = int(input("Enter the number: "))
+    # while num < 10 or num > 20:
+    #     if num < 10:
+    #         print("Too low")
+    #     else:
+    #         print("Too high")
+    #     num = int(input("Enter the number: "))
+    # print("Thank you")
     # 049
+    # compnum = 50
+    # num = int(input("Enter the number: "))
+    # count = 1
+    # while num != compnum:
+    #
+    #     if num < compnum:
+    #         print("up")
+    #     else:
+    #         print("down")
+    #     count = count + 1
+    #     num = int(input("Enter the number: "))
+    # print("Well done, you took", count, "attempt")
 
     # 048
     # count = 0
