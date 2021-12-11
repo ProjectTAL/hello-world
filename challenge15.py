@@ -139,30 +139,107 @@ def showAllNames():
     file.close()
 
 
+# 122 & 123
+def showMenu():
+    print("""
+1) Add to file
+2) View all records
+3) Delete a record
+4) Quit program
+""")
+
+
+def returnDigit(text):
+    if str(text).isdigit():
+        ret = int(text)
+    else:
+        ret = 6
+    return ret
+
+
+def addSalaries():
+    name = input("Enter name :")
+    salary = int(input("Enter salary :"))
+    file = open("Salaries.csv", "a")
+    record = name + "," + str(salary) + "\n"
+    file.write(str(record))
+    file.close()
+
+
+def viewAllRecord():
+    file = open("Salaries.csv", "r")
+    reader = csv.reader(file)
+    rows = list(reader)
+    tmp = []
+    for row in rows:
+        tmp.append(row)
+    file.close()
+
+    x = 0
+    for index, row in enumerate(tmp):
+        print('{}> name:{} salary:{}'.format(index, tmp[x][0], tmp[x][1]))
+        x = x + 1
+
+
+def deleteRecord():
+    delText = input("Enter name that you want to delete : ")
+    file = open("Salaries.csv", "r")
+    reader = csv.reader(file)
+    rows = list(reader)
+    tmp = []
+    for row in rows:
+        tmp.append(row)
+    file.close()
+
+    x = 0
+    file = open("Salaries.csv", "w")
+    for row in tmp:
+        if delText not in row:
+            newRec = tmp[x][0] + "," + tmp[x][1] + "\n"
+            file.write(str(newRec))
+        x = x + 1
+    file.close()
+
+
 if __name__ == '__main__':
     printTest()
+    # 122 & 123
+    showMenu()
+    while True:
+        answer = returnDigit(input("Enter the number of your selection : "))
+        if answer == 1:
+            addSalaries()
+        elif answer == 2:
+            viewAllRecord()
+        elif answer == 3:
+            deleteRecord()
+        elif answer == 4:
+            break
+        else:
+            print("Wrong number!\n")
+
     # 121
-    flag = False
-    while not flag:
-        showMenu()
-        menuNum = input("Enter number :")
-        if menuNum.isdigit():
-            menuNum = int(menuNum)
-        else:
-            menuNum = 6
-        if menuNum == 1:
-            addName()
-        elif menuNum == 2:
-            modifyName()
-        elif menuNum == 3:
-            deleteName()
-        elif menuNum == 4:
-            showAllNames()
-        elif menuNum == 5:
-            flag = True
-        else:
-            print("You entered wrong number or string\n\nPlease enter the number (1-5) :")
-    print("Bye Bye~")
+    # flag = False
+    # while not flag:
+    #     showMenu()
+    #     menuNum = input("Enter number :")
+    #     if menuNum.isdigit():
+    #         menuNum = int(menuNum)
+    #     else:
+    #         menuNum = 6
+    #     if menuNum == 1:
+    #         addName()
+    #     elif menuNum == 2:
+    #         modifyName()
+    #     elif menuNum == 3:
+    #         deleteName()
+    #     elif menuNum == 4:
+    #         showAllNames()
+    #     elif menuNum == 5:
+    #         flag = True
+    #     else:
+    #         print("You entered wrong number or string\n\nPlease enter the number (1-5) :")
+    # print("Bye Bye~")
 
     # 120
 #     print("""1) Addition
