@@ -1,3 +1,4 @@
+import csv
 import random
 from tkinter import *
 
@@ -78,58 +79,125 @@ def printTest():
 #     labelResult2.config(text="{}kilo -> {}mile".format(round(float(mile), 4), round(float(variable), 4)))
 
 # 129 & 130
-def isDigit():
+# def isDigit():
+#     global count
+#     number = edit.get()
+#     if str(number).isdigit():
+#         listBox.insert(count, number)
+#         count += 1
+#     else:
+#         edit.delete(0, END)
+#
+#
+# def clearList():
+#     count = 0
+#     listBox.delete(0, END)
+#
+#
+# def saveCSV():
+#     tmp_list = listBox.get(0, END)
+#     file = open("Num.csv", "w")
+#     x = 0
+#     for row in tmp_list:
+#         newRec = tmp_list[x][0] + "\n"
+#         file.write(str(newRec))
+#         x += 1
+#     file.close()
+
+# 131
+def addData():
     global count
-    number = edit.get()
-    if str(number).isdigit():
-        listBox.insert(count, number)
-        count += 1
-    else:
-        edit.delete(0, END)
-
-
-def clearList():
-    count = 0
-    listBox.delete(0, END)
-
-
-def saveCSV():
-    tmp_list = listBox.get(0, END)
-    file = open("Num.csv", "w")
-    x = 0
-    for row in tmp_list:
-        newRec = tmp_list[x][0] + "\n"
-        file.write(str(newRec))
-        x += 1
+    count += 1
+    labelCount.config(text="{}".format(count))
+    file = open("Data.csv", "a")
+    name = str(edit.get())
+    age = str(edit2.get())
+    newRec = name + "," + age + "\n"
+    file.write(newRec)
+    print("name:{} age:{}".format(name, age))
+    edit.delete(0, END)
+    edit2.delete(0, END)
     file.close()
+
+
+def printData():
+    print("Print")
+    global count
+    file = open("Data.csv", "r")
+    reader = csv.reader(file)
+    rows = list(reader)
+    tmp = []
+    for row in rows:
+        tmp.append(row)
+    file.close()
+
+    x = 0
+    for index, row in enumerate(tmp):
+        newLine = str(index) + ") name:" + str(tmp[x][0]) + " age:" + str(tmp[x][1])
+        x = x + 1
+        listBox.insert(count, str(newLine))
+        count += 1
 
 
 if __name__ == '__main__':
     printTest()
-    # 129 & 130
+    # 131
     window = Tk()
-    window.title("DIGIT CHECKER")
-    window.geometry("400x400")
+    window.title("ADD DATA")
+    window.geometry("300x400")
 
-    label = Label(window, text="Enter number:")
+    label = Label(window, text="Enter name:")
     label.place(x=5, y=0)
-    edit = Entry(window, width=30, textvariable=str)
+    edit = Entry(window, width=20, textvariable=str)
     edit.pack(side=TOP, anchor='ne')
-    edit.place(x=120, y=0)
+    edit.place(x=80, y=0)
 
-    button = Button(text="Add Digit", command=isDigit)
-    button.place(x=80, y=30, width=120, height=25)
+    count = 0
+    labelCount = Label(window, text="{}".format(count))
+    labelCount.place(x=240, y=0)
 
-    clearButton = Button(text="Clear", command=clearList)
-    clearButton.place(x=80, y=60, width=120, height=25)
+    label2 = Label(window, text="Enter age:")
+    label2.place(x=5, y=30)
+    edit2 = Entry(window, width=20, textvariable=str)
+    edit2.pack(side=TOP, anchor='ne')
+    edit2.place(x=80, y=30)
 
-    csvButton = Button(text="Save as csv", command=saveCSV)
-    csvButton.place(x=80, y=90, width=120, height=25)
+    button = Button(text="Add data", command=addData)
+    button.place(x=80, y=60, width=120, height=25)
+
+    buttonPrint = Button(text="print data", command=printData)
+    buttonPrint.place(x=80, y=90, width=120, height=25)
 
     count = 0
     listBox = Listbox(window, selectmode='extended')
-    listBox.place(x=5, y=120)
+    listBox.place(x=80, y=130)
+
     window.mainloop()
+
+    # 129 & 130
+    # window = Tk()
+    # window.title("DIGIT CHECKER")
+    # window.geometry("400x400")
+    #
+    # label = Label(window, text="Enter number:")
+    # label.place(x=5, y=0)
+    # edit = Entry(window, width=30, textvariable=str)
+    # edit.pack(side=TOP, anchor='ne')
+    # edit.place(x=120, y=0)
+    #
+    # button = Button(text="Add Digit", command=isDigit)
+    # button.place(x=80, y=30, width=120, height=25)
+    #
+    # clearButton = Button(text="Clear", command=clearList)
+    # clearButton.place(x=80, y=60, width=120, height=25)
+    #
+    # csvButton = Button(text="Save as csv", command=saveCSV)
+    # csvButton.place(x=80, y=90, width=120, height=25)
+    #
+    # count = 0
+    # listBox = Listbox(window, selectmode='extended')
+    # listBox.place(x=5, y=120)
+    # window.mainloop()
 
     # 128
     # window = Tk()
