@@ -4,8 +4,9 @@ import time
 from tkinter import *
 from pygame import mixer
 
+
 def getRandomNumber():
-    ret = random.randint(10, 50)
+    ret = random.randint(1, 100)
     return ret
 
 
@@ -56,23 +57,27 @@ def nextProblem():
 
 
 def setTimer(val):
+    labelFrameTime = LabelFrame(window, text="TIME", padx=10, pady=10)
+    labelFrameTime.pack()
+    labelFrameTime.place(x=500, y=10)
     global timeGlobal
-    timer = Label(window, text="Time:{}".format(val))
-    timer.config(font=('Helvatical bold', 10))
-    timer.place(x=10, y=50)
+    timer = Label(labelFrameTime, text="{}".format(val))
+    timer.config(font=('Helvatical bold', 50))
+    timer.grid(row=0, column=0)
     while val:
         timeGlobal = val
         if stopThread.is_set():
             break
         print("time : {}".format(val))
-        timer.config(text="Time:{}".format(val))
+        if val < 10:
+            timer.config(fg="red")
+        timer.config(text="{}".format(val))
         time.sleep(1)
         val -= 1
     mixer.music.stop()
     timeGlobal = 0
-    timer.config(text="Time:{}".format(val))
+    timer.config(text="{}".format(val))
     print("Finished! ")
-    button.config(state=DISABLED)
     buttonNext.config(state=DISABLED)
 
 
@@ -84,36 +89,44 @@ if __name__ == '__main__':
 
     window = Tk()
     window.title("QUIZ")
-    window.geometry("300x250")
+    window.geometry("650x550")
     window.resizable(0, 0)
     try:
         window.wm_iconbitmap("wint.ico")
     except Exception:
         print("Exception happens")
-    label = Label(window, text="{} + {} = ".format(num1, num2))
-    label.config(font=('Helvatical bold', 10))
-    label.place(x=3, y=10)
-    edit = Entry(window, width=20, textvariable=str)
-    edit.place(x=70, y=10)
+
+    labelFrame = LabelFrame(window, text="Problem", padx=10, pady=10)
+    labelFrame.pack()
+    labelFrame.place(x=5, y=10)
+
+    label = Label(labelFrame, text="{} + {} = ".format(num1, num2))
+    label.config(font=('Helvatical bold', 30))
+    label.grid(row=0, column=0)
+    edit = Entry(labelFrame, width=5, textvariable=str, font=("defualt", 40))
+    edit.grid(row=0, column=1)
+    edit.focus()
 
     window.bind('<Return>', enterAnswer)
-    button = Button(text="GO", command=goAnswer, bg="green")
-    button.place(x=230, y=10, width=45, height=20)
+
+    labelFrame2 = LabelFrame(window, text="SCORE", padx=10, pady=10)
+    labelFrame2.pack()
+    labelFrame2.place(x=200, y=200)
 
     photo = PhotoImage(file="resource\img\Q.gif")
-    photoBox = Label(window, image=photo)
+    photoBox = Label(labelFrame2, image=photo)
     photoBox.image = photo
-    photoBox.place(x=70, y=50, width=120, height=120)
+    photoBox.grid(row=0, column=0)
 
-    buttonNext = Button(text="NEXT", command=nextProblem, bg="green")
-    buttonNext.place(x=70, y=190, width=130, height=20)
+    buttonNext = Button(labelFrame2, text="NEXT", command=nextProblem, bg="green")
+    buttonNext.grid(row=1, column=0)
 
-    countLabel = Label(window, text="Score\n{}".format(count * 10))
-    countLabel.config(font=('Helvatical bold', 13))
-    countLabel.place(x=210, y=100)
+    countLabel = Label(labelFrame2, text="Score\n{}".format(count * 10))
+    countLabel.config(font=('Helvatical bold', 30))
+    countLabel.grid(row=2, column=0)
 
     stopThread = threading.Event()
-    startThread = threading.Thread(target=setTimer, args=(30,))  # time-out value : 30 seconds
+    startThread = threading.Thread(target=setTimer, args=(60,))  # time-out value : 60 seconds
     startThread.start()
 
     mixer.init()
