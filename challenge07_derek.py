@@ -36,39 +36,6 @@ if __name__ == '__main__':
     #         count = count + 0
     # print("You got {} questions right.".format(count))
 
-    # count = 1
-    # num1 = random.randint(1, 100)
-    # num2 = random.randint(1, 100)
-    # num3 = random.randint(1, 100)
-    # num4 = random.randint(1, 100)
-    # num5 = random.randint(1, 100)
-    # quiz = int(input("{} + {}: ".format(num1, num2)))
-    # quiz1 = num1 + num2
-    # if quiz == quiz1:
-    #     count = count + 1
-    # else:
-    #     count = count + 0
-    # #----------------------------------------------------
-    # quiz = int(input("{} + {}: ".format(num3, num4)))
-    # quiz1 = num2 + num4
-    # if quiz == quiz1:
-    #     count = count + 1
-    # else:
-    #     count = count + 0
-
-    # 057
-    # num = random.randint(0, 10)
-    # answer = int(input("{} Choose 1~10: ".format(num)))
-    # while True:
-    #     if answer == num:
-    #         break
-    #     else:
-    #         if answer < num:
-    #             print("up")
-    #         else:
-    #             print("down")
-    #         answer = int(input("{} Choose 1~10: ".format(num)))
-
     # 056
     # num = random.randint(0, 10)
     # answer = int(input("{} Choose 1~10: ".format(num)))
